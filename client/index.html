@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--save all fonts and styles needed-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFGWeb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo" style="margin-left: 50px">TFG Web</a>
+          <!--ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a onclick="M.toast({html: 'Connected!'})" class="waves-effect waves-light btn">CONNECT <i class="material-icons right">arrow_forward</i></a></li>
+          </ul-->
+        </div>
+    </nav>
+    <section class="openloop-container">
+        <div class="row">
+            <div class="col s12">
+              <ul class="tabs">
+                <li class="tab col s6"><a class="active" href="#openloop">OPENLOOP</a></li>
+                <li class="tab col s6"><a href="#closedloop">CLOSEDLOOP</a></li>
+              </ul>
+            </div>
+            <div id="openloop" class="col s12">
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="Setpoint" id="consignaop" type="number" class="validate">
+                          <label for="consigna">Consigna</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <button id="writeop" onclick="writeValuesOpenLoop()" class="btn waves-effect waves-light" type="button" name="action">Write</button>
+                      </div>
+                      <div class="row">
+                          <div id="chart">
+
+                          </div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+            <div id="closedloop" class="col s12">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Setpoint" id="consignacl" type="number" class="validate">
+                      <label for="consigna">Consigna</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input placeholder="Kp" id="kp" type="number" class="validate">
+                      <label for="Kp">Kp</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input placeholder="Ki" id="ki" type="number" class="validate">
+                      <label for="Ki">Ki</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button id="writecl" onclick="writeValuesClosedLoop()" class="btn waves-effect waves-light" type="button" name="action">Write</button>
+                  </div>
+                  <div class="row">
+                      <div id="chartcl">
+                      </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+    </section>
+
+    
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="https://code.highcharts.com/highcharts.js"></script>
+    <script defer src="/script.js"></script>
+</body>
+</html>

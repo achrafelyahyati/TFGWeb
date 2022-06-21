@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+}
+.openloop-container{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+.openloop-container > div{
+    min-width: 50%;
+    text-align: center;
+}
+.closedloop-container{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+.closedloop-container > div{
+    min-width: 50%;
+    text-align: center;
+}
+#openloop{
+    margin: 25px 0;
+}
+#closedloop{
+    margin: 25px 0;
+}
+#chart{
+    display: flex;
+    justify-content: center;
+}
